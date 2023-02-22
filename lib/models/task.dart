@@ -1,26 +1,26 @@
-import 'package:equatable/equatable.dart';
 import 'package:hive/hive.dart';
+part 'task.g.dart';
 
 @HiveType(typeId: 0)
-class Task extends Equatable {
+class Task extends HiveObject {
   @HiveField(0)
   final String title;
   @HiveField(1)
-  final DateTime time;
+  final String time;
   @HiveField(2)
-  final DateTime date;
+  final String date;
   @HiveField(3)
-  final Status taskStatus;
+  Status taskStatus;
+  @HiveField(4)
+  final String id;
 
-  const Task({
+  Task({
     required this.title,
     required this.time,
     required this.date,
     required this.taskStatus,
+    required this.id,
   });
-
-  @override
-  List<Object> get props => [title, time, date, taskStatus];
 }
 
 @HiveType(typeId: 1)

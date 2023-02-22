@@ -41,6 +41,8 @@ dependencies:
   sizer: ^2.0.15
   equatable: ^2.0.5
   animated_bottom_navigation_bar: ^1.1.0+1
+  intl: ^0.18.0
+  uuid: ^3.0.7
 
 dev_dependencies:
   flutter_test:
